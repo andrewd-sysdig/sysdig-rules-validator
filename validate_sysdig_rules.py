@@ -31,7 +31,7 @@ if r.status_code == 200:
     print("Newest Default Sysdig rules downloaded")
         
 elif r.status_code != 200:
-    print("The Sysdig API {0} did not return a HTTP 200 (OK) response. Response Code: {1}, Response Text: {2}".format(url, r.status_code, r.response_text))
+    print("The Sysdig API did not return a HTTP 200 (OK) response. Response Code: {0}, Response Text: {1}".format(r.status_code, r.response_text))
 
 # Execute falco -V to validate the falco rules
 cmd_str="/falco/usr/bin/falco -c /falco/etc/falco/falco.yaml -V threat_intelligence_feed.yaml -V aws_cloudtrail.yaml -V azure_platformlogs.yaml -V cloud.yaml -V falco_rules.yaml -V gcp_auditlog.yaml -V k8s_audit_rules.yaml -V falco_rules_local.yaml"
