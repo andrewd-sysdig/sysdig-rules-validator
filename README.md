@@ -7,7 +7,7 @@ This container can be used to validate your `falco_local_rules.yaml` file before
 Run the following docker command in the same directory as your `falco_rules_local.yaml` (Custom rules file)
 
 ```bash
-docker run -v $(pwd)/falco_rules_local.yaml:/home/app/falco_rules_local.yaml -e SECURE_API_TOKEN=xxxx -e API_ENDPOINT=https://app.au1.sysdig.com ghcr.io/andrewd-sysdig/sysdig-rules-validator:latestsysdig-rules-validator:latest
+docker run -v $(pwd)/falco_rules_local.yaml:/home/app/falco_rules_local.yaml -e SECURE_API_TOKEN=xxxx -e API_ENDPOINT=https://app.au1.sysdig.com ghcr.io/andrewd-sysdig/sysdig-rules-validator:latest
 Newest Default Sysdig rules downloaded
 Running Falco Rule validation...
 Tue Mar 21 11:49:45 2023: Falco version: 0.34.1 (x86_64)
