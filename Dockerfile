@@ -13,6 +13,10 @@ ADD validate_sysdig_rules.py requirements.txt /
 
 RUN pip3 install -r requirements.txt
 
-WORKDIR /
+RUN useradd -m app
+
+WORKDIR /home/app
+
+USER app
 
 ENTRYPOINT ["python3", "/validate_sysdig_rules.py"]
